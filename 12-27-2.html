@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>menu</title>
+    <link rel="stylesheet" href="css/12-27-2.css">
+    <script src="scr/jquery-3.7.1.min.js"></script>
+    <script lang="java">
+        $(function(){
+            $(".main> li, .img_area").mouseenter(function(){
+                $(".sub, .img_area").stop().show();
+            })//mouseenter
+
+            $(".main> li, .img_area").mouseleave(function(){
+                $(".sub, .img_area").stop().hide();
+            })//mouseleave
+
+            
+            $(".main> li").mouseenter(function(){
+                var n = $(this).index();
+                console.log("n:", n);
+
+                $(".img_area .icons li").hide();
+                $(".img_area .icons li").eq(n).show();
+
+            })//
+
+
+        })//jquery
+        </script>
+</head>
+
+
+<body>
+<!-- 메뉴에 따라 달라지는 메뉴별 그림 -->
+<header id="header">
+    <div class="h_inner">
+        <h1 class="title"><a href="#">web accessibility</a></h1>
+
+        <nav class="nav">
+          <ul class="main">
+            <li class="menu-1">
+                <a href="#">HTML</a>
+                <ul class="sub sub1">
+                    <li><a href="#">HTML menu-1</a></li>
+                    <li><a href="#">HTML menu-2</a></li>
+                    <li><a href="#">HTML menu-3</a></li>
+                    <li><a href="#">HTML menu-4</a></li>
+                    <li><a href="#">HTML menu-5</a></li>
+                    <li><a href="#">HTML menu-6</a></li>
+                </ul>
+            </li>
+            <li class="menu-2">
+                <a href="#">CSS</a>
+                <ul class="sub sub2">
+                    <li><a href="#">CSS menu-1</a></li>
+                    <li><a href="#">CSS menu-2</a></li>
+                    <li><a href="#">CSS menu-3</a></li>
+                </ul>
+            </li>
+            <li class="menu-3">
+                <a href="#">JavaScript</a>
+                <ul class="sub sub3">
+                    <li><a href="#">JavaScript menu-1</a></li>
+                    <li><a href="#">JavaScript menu-2</a></li>
+                    <li><a href="#">JavaScript menu-3</a></li>
+                    <li><a href="#">JavaScript menu-4</a></li>
+                    <li><a href="#">JavaScript menu-5</a></li>
+                    <li><a href="#">JavaScript menu-6</a></li>
+                    <li><a href="#">JavaScript menu-7</a></li>
+                </ul>
+            </li>
+            <li class="menu-4">
+                <a href="#">JQuery</a>
+                <ul class="sub sub4">
+                    <li><a href="#">HTML menu-1</a></li>
+                    <li><a href="#">HTML menu-2</a></li>
+                    <li><a href="#">HTML menu-3</a></li>
+                    <li><a href="#">HTML menu-4</a></li>
+                    <li><a href="#">HTML menu-5</a></li>
+                    <li><a href="#">HTML menu-6</a></li>
+                </ul>
+            </li>
+            <li class="menu-5">
+                <a href="#">XML</a>
+                <ul class="sub sub5">
+                    <li><a href="#">XML menu-1</a></li>
+                    <li><a href="#">XML menu-2</a></li>
+                    <li><a href="#">XML menu-3</a></li>
+                    <li><a href="#">XML menu-4</a></li>
+                </ul>
+            </li>
+          </ul> <!-- main -->
+
+          <div class="img_area">
+            <ul class="icons">
+                <li class="icon1"><img src="img/icon1.png" alt="icon01"></li>
+                <li class="icon2"><img src="img/icon2.png" alt="icon02"></li>
+                <li class="icon3"><img src="img/icon3.png" alt="icon03"></li>
+                <li class="icon4"><img src="img/icon4.png" alt="icon04"></li>
+                <li class="icon5"><img src="img/icon5.png" alt="icon05"></li>
+            </ul> <!-- icons -->
+          </div> <!-- img_area -->
+
+        </nav>
+    </div> <!-- h_inner -->
+</header> <!-- header -->
+
+</body>
+</html>
+
+
+
+
+
+
+
